@@ -1,1 +1,1 @@
-# baclight-c
+# backlight-c
