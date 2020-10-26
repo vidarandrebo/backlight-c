@@ -9,7 +9,7 @@ In `src/backlight.c`:
 
 - Change the UPPER value to the value specified in `/sys/class/backlight/**/max-brightness`.
 
-- Change the path in `fopen` to the correct path.
+- Change the path in `fopen` to the correct path for your backlight file.
 
 Complile the file `gcc -O3 src/backlight.c -o src/backlight`
 
