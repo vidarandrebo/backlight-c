@@ -1,9 +1,11 @@
 # backlight-c
 
 ## Installation
-Change the UPPER value to the value specified in `/sys/class/backlight/**/max-brightness`.
+In `backlight.c`:
 
-Change the path in `fopen` to the correct path.
+- Change the UPPER value to the value specified in `/sys/class/backlight/**/max-brightness`.
+
+- Change the path in `fopen` to the correct path.
 
 Complile the file `gcc -O3 backlight.c -o backlight`
 
