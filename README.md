@@ -1,7 +1,7 @@
 # backlight-c
 
 ## Installation
-In `backlight.c`:
+In `src/backlight.c`:
 
 - Change the UPPER value to the value specified in `/sys/class/backlight/**/max-brightness`.
 
