@@ -6,12 +6,10 @@ int main(int argc, char* argv[]) {
     if (argc != 3) {
         return 0;
     }
+    char fileval[20];
     FILE *fp;
     fp = fopen(BACKLIGHT ,"r+");
-    char fileval[20];
     fscanf (fp, "%s", fileval);
-    //Needed for writing at start of file
-    fseek(fp, 0, SEEK_SET);
     int backlight = atoi(fileval);
     int increment = atoi(argv[2]);
     char operator = argv[1][0];

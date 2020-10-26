@@ -5,4 +5,5 @@
 #define UPPER 120000
 
 //defines path for brightness-file
-#define BACKLIGHT "/home/vidar/Repos/backlight-c/src/test"
+#define BACKLIGHT "/sys/class/backlight/intel_backlight/brightness"
+//#define BACKLIGHT "/home/vidar/Repos/backlight-c/src/test"
