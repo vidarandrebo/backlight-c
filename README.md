@@ -7,11 +7,11 @@ Download the program with `git clone https://github.com/vidarandrebo/backlight-c
 
 Change dir `cd backlight-c`
 
-In `src/backlight.c`:
+In `src/config.h`:
 
-- Change the UPPER value to the value specified in `/sys/class/backlight/**/max_brightness`.
+- Change the `UPPER` value to the value specified in `/sys/class/backlight/**/max_brightness`.
 
-- Change the path in `fopen` to the correct path for your brightness file.
+- Change the `BACKLIGHT` value to the correct path for your brightness file.
 
 Complile the file `gcc -O3 src/backlight.c -o src/backlight`
 

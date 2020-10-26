@@ -1,39 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define LOWER 0
-#define UPPER 120000
+#include "config.h"
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
         return 0;
     }
+    char fileval[20];
     FILE *fp;
-    fp = fopen("/sys/class/backlight/intel_backlight/brightness" ,"r+");
-    char light[20];
-    fscanf (fp, "%s", light);
-    //Needed for writing at start of file
-    fseek(fp, 0, SEEK_SET);
-    int lightint = atoi(light);
-    int a = atoi(argv[2]);
-    char k = argv[1][0];
-    switch (k) {
+    fp = fopen(BACKLIGHT ,"r");
+    fscanf (fp, "%s", fileval);
+    fclose(fp);
+    int bl = atoi(fileval);
+    int inc = atoi(argv[2]);
+    char op = argv[1][0];
+    switch (op) {
         case '+':
-            lightint += a; 
+            bl += inc; 
             break;
         case '-':
-            lightint -= a;
+            bl -= inc;
             break;
         default:
-            fclose(fp);
             return 0;
     }
-    if (lightint > UPPER) {
-        lightint = UPPER;
+    if (bl > UPPER) {
+        bl = UPPER;
     }
-    if (lightint < LOWER) {
-        lightint = LOWER;
+    if (bl < LOWER) {
+        bl = LOWER;
     }
-    fprintf(fp, "%d\n",lightint);
+    fp = fopen(BACKLIGHT ,"w");
+    fprintf(fp,"%d",bl);
     fclose(fp);
     return 0;
 }
