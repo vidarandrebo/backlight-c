@@ -8,31 +8,31 @@ int main(int argc, char* argv[]) {
     }
     FILE *fp;
     fp = fopen(BACKLIGHT ,"r+");
-    char light[20];
-    fscanf (fp, "%s", light);
+    char fileval[20];
+    fscanf (fp, "%s", fileval);
     //Needed for writing at start of file
     fseek(fp, 0, SEEK_SET);
-    int lightint = atoi(light);
-    int a = atoi(argv[2]);
-    char k = argv[1][0];
-    switch (k) {
+    int backlight = atoi(fileval);
+    int increment = atoi(argv[2]);
+    char operator = argv[1][0];
+    switch (operator) {
         case '+':
-            lightint += a; 
+            backlight += increment; 
             break;
         case '-':
-            lightint -= a;
+            backlight -= increment;
             break;
         default:
             fclose(fp);
             return 0;
     }
-    if (lightint > UPPER) {
-        lightint = UPPER;
+    if (backlight > UPPER) {
+        backlight = UPPER;
     }
-    if (lightint < LOWER) {
-        lightint = LOWER;
+    if (backlight < LOWER) {
+        backlight = LOWER;
     }
-    fprintf(fp, "%d\n",lightint);
+    fprintf(fp,"%d ",backlight);
     fclose(fp);
     return 0;
 }
