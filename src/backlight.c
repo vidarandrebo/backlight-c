@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define LOWER 0
-#define UPPER 120000
+#include "config.h"
 
 int main(int argc, char* argv[]) {
     if (argc != 3) {
         return 0;
     }
     FILE *fp;
-    fp = fopen("/sys/class/backlight/intel_backlight/brightness" ,"r+");
+    fp = fopen(PATH ,"r+");
     char light[20];
     fscanf (fp, "%s", light);
     //Needed for writing at start of file
