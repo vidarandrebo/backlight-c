@@ -6,4 +6,3 @@
 
 //defines path for brightness-file
 #define BACKLIGHT "/sys/class/backlight/intel_backlight/brightness"
-//#define BACKLIGHT "/home/vidar/Repos/backlight-c/src/test"

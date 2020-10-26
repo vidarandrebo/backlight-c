@@ -8,29 +8,30 @@ int main(int argc, char* argv[]) {
     }
     char fileval[20];
     FILE *fp;
-    fp = fopen(BACKLIGHT ,"r+");
+    fp = fopen(BACKLIGHT ,"r");
     fscanf (fp, "%s", fileval);
-    int backlight = atoi(fileval);
-    int increment = atoi(argv[2]);
-    char operator = argv[1][0];
-    switch (operator) {
+    fclose(fp);
+    int bl = atoi(fileval);
+    int inc = atoi(argv[2]);
+    char op = argv[1][0];
+    switch (op) {
         case '+':
-            backlight += increment; 
+            bl += inc; 
             break;
         case '-':
-            backlight -= increment;
+            bl -= inc;
             break;
         default:
-            fclose(fp);
             return 0;
     }
-    if (backlight > UPPER) {
-        backlight = UPPER;
+    if (bl > UPPER) {
+        bl = UPPER;
     }
-    if (backlight < LOWER) {
-        backlight = LOWER;
+    if (bl < LOWER) {
+        bl = LOWER;
     }
-    fprintf(fp,"%d ",backlight);
+    fp = fopen(BACKLIGHT ,"w");
+    fprintf(fp,"%d",bl);
     fclose(fp);
     return 0;
 }
