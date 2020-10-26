@@ -1,6 +1,8 @@
 # Backlight-C
 
 ## Installation
+Make sure `gcc` or another C-compiler is installed.
+
 Download the program with `git clone https://github.com/vidarandrebo/backlight-c.git`
 
 Change dir `cd backlight-c`
