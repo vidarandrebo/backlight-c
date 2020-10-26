@@ -1,4 +1,5 @@
 # Backlight-C
+Backlight-C is a utility for changing the screen-brightness on laptops running linux.
 
 ## Installation
 Make sure `gcc` or another C-compiler is installed.
