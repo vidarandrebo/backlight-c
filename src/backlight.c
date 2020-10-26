@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
         return 0;
     }
     FILE *fp;
-    fp = fopen(PATH ,"r+");
+    fp = fopen(BACKLIGHT ,"r+");
     char light[20];
     fscanf (fp, "%s", light);
     //Needed for writing at start of file
