@@ -1,4 +1,4 @@
-# backlight-c
+# Backlight-C
 
 ## Installation
 In `src/backlight.c`:
