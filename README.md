@@ -7,7 +7,7 @@ In `src/backlight.c`:
 
 - Change the path in `fopen` to the correct path.
 
-Complile the file `gcc -O3 backlight.c -o backlight`
+Complile the file `gcc -O3 src/backlight.c -o src/backlight`
 
 Move the file to `$PATH` - `cp src/backlight /usr/bin/backlight`
 
