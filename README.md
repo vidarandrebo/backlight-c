@@ -1,6 +1,10 @@
 # Backlight-C
 
 ## Installation
+Download the program with `git clone https://github.com/vidarandrebo/backlight-c.git`
+
+`cd backlight-c`
+
 In `src/backlight.c`:
 
 - Change the UPPER value to the value specified in `/sys/class/backlight/**/max-brightness`.
