@@ -3,7 +3,7 @@
 ## Installation
 Download the program with `git clone https://github.com/vidarandrebo/backlight-c.git`
 
-`cd backlight-c`
+Change dir `cd backlight-c`
 
 In `src/backlight.c`:
 
