@@ -19,4 +19,4 @@ Complile the file `gcc -O3 src/backlight.c -o src/backlight`
 Move the file to `$PATH` - `cp src/backlight /usr/bin/backlight`
 
 ## Run
-Change the backlight with `sudo ./backlight +/- <number>`
+Change the backlight with `sudo backlight +/- <number>`
